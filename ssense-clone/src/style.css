@@ -1,0 +1,12 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .hello {
+    color: blue;
+  }
+  .navbar{
+    font-family:'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  }
