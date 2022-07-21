@@ -4,16 +4,16 @@ import { NavLink } from 'react-router-dom';
 // import "../styles.css";
 const Navbar = () => {
   return (
-    <Flex textTransform="uppercase" fontFamily="arial" fontSize="12px" justifyContent="space-around" border="1px solid grey"  >
+    <Flex textTransform="uppercase" fontFamily="arial" fontSize="12px" justifyContent="space-around" >
       <Box display="flex" justifyContent="space-around">
-        <Box margin="10px">
+        <Box margin="10px" _hover={{textDecoration:"underline"}}>
         <NavLink to="/Menswear">MensWear</NavLink>
         </Box>
-        <Box margin="10px"> <NavLink to="/Womenswear">WomensWear</NavLink></Box>
-        <Box margin="10px" > <NavLink to="/EveryThingElse">EveryThing Else</NavLink></Box>
-        <Box margin="10px"> <NavLink to="/Sale">Sale</NavLink>
+        <Box margin="10px" _hover={{textDecoration:"underline"}}  > <NavLink to="/Womenswear">WomensWear</NavLink></Box>
+        <Box margin="10px"_hover={{textDecoration:"underline"}} > <NavLink to="/EveryThingElse">EveryThing Else</NavLink></Box>
+        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/Sale">Sale</NavLink>
         </Box>
-        <Box margin="10px"> <NavLink to="/Search">Search</NavLink></Box>       
+        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/Search">Search</NavLink></Box>       
       </Box>
       <Box>
         <NavLink to="/">
@@ -31,7 +31,7 @@ const Navbar = () => {
       </Box>
       <Box display="flex" justifyContent="space-around">
         <Box margin="10px">
-        <NavLink to="/" id="language">
+        <NavLink to="#" id="language">
           ENGLISH
           {/* <ul className='drop_down'>
                         <li>
@@ -44,17 +44,17 @@ const Navbar = () => {
                      */}
         </NavLink>
         </Box >
-        <Box margin="10px">
+        <Box margin="10px" _hover={{textDecoration:"underline"}}>
         <NavLink to="/login" >
           LOGIN
         </NavLink>
         </Box>
-        <Box margin="10px">
+        <Box margin="10px" _hover={{textDecoration:"underline"}}>
         <NavLink to="/" >
           WISHLIST
         </NavLink>
         </Box>
-        <Box margin="10px">
+        <Box margin="10px" _hover={{textDecoration:"underline"}}>
         <NavLink to="/checkout" className="link">
           SHOPPING BAG
         </NavLink>
