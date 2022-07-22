@@ -98,12 +98,12 @@ import Footer from "../Components/Footer";
             Continue
           </Button>
         </FormControl>
-        <Box w="60%" mt="2rem" mb="2rem" fontSize="11px" lineHeight="18px" fontWeight="400">
-            <Text>When you create an SSENSE account, we collect your email and other personal data to enhance your shopping experience and, subject to your agreement, to provide you with exclusive email updates, promotions and notifications. We may also use third party search engines and social media platforms to deliver our updates, promotions and notifications to you.</Text>
+        <Box w="60%" mt="2rem" mb="2rem" fontSize="11px" lineHeight="18px" fontWeight="400" fontFamily="sans-serif">
+            <Text as="p">When you create an SSENSE account, we collect your email and other personal data to enhance your shopping experience and, subject to your agreement, to provide you with exclusive email updates, promotions and notifications. We may also use third party search engines and social media platforms to deliver our updates, promotions and notifications to you.</Text>
             <Spacer />
-            <Text>You may unsubscribe at any time.</Text>
+            <Text as="p">You may unsubscribe at any time.</Text>
             <Spacer />
-             <Text>To find out more, please visit our Privacy Policy.</Text>
+             <Text as="p"> To find out more, please visit our Privacy Policy.</Text>
              </Box>
         </Box>  
     <Footer />
