@@ -31,13 +31,13 @@ function Sorting() {
          <Heading as="h2" fontSize="14px" textDecoration="underline"> Sort</Heading>
         <Box fontSize="12px" flexDirection="column" >{
             Sort_Data.Sorting.map((el)=>(
-                <Box key={el}><Link _hover={{textDecoration:"underline"}} ml="0" to={`./${el}`}> {el}</Link></Box>
+                <Box key={el} _hover={{textDecoration:"underline"}}><Link  ml="0" to={`./${el}`}> {el}</Link></Box>
             ))} </Box>
             </VStack>
             <VStack alignItems="flex-start" pl={[1]} pb="20px"> <Heading as="h2" fontSize="14px"> Colors</Heading>
         <Box fontSize="12px" flexDirection="column">{
-            Sort_Data.Colors.map((el,i)=>(
-                <Box key={i}><Link _hover={{textDecoration:"underline"}} ml="0" to={`./${el}`} > {el}</Link></Box>
+            Sort_Data.Colors.map((el)=>(
+                <Box key={el} _hover={{textDecoration:"underline"}}><Link  ml="0" to={`./${el}`} > {el}</Link></Box>
             ))} </Box>
             </VStack> 
     </Stack>
