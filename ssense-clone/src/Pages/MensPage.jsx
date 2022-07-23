@@ -16,7 +16,7 @@ useEffect(()=>{
   
   axios.get('https://server-ssense-clone.herokuapp.com/mensData')
   .then((res)=>{
-    console.log(res.data)
+    /* console.log(res.data)*/
     setData(res.data)
   })
     .catch((err)=>(
@@ -30,28 +30,32 @@ useEffect(()=>{
   // getData()
   return (
     <>
-    <Stack display="flex" flexDirection="row" justifyContent="space-evenly">
-    <Box h="auto" w="15%" border="1px solid red" p="10px">
+    <Stack display="flex" flexDirection="row" justifyContent="space-evenly" pb="20px">
+    <Box h="auto" w="12%"  p="10px">
       <Filter />
       </Box>    
-    <Grid h="auto" w="60%" p={[1]} border="1px solid black"templateColumns='repeat(4, 1fr)' templateRows="auto">
+    <Grid h="auto" w="70%" p={[2]} templateColumns='repeat(4, 1fr)' templateRows="auto" gap="10px">
       {data.map((el)=>{
         
-        console.log(el)
+        /* console.log(el) */
         return(
-          <GridItem>
-          <Link to={el.id}>
-          <Image w="auto" h="80%" m="auto" src={el.itemImg}/>
+          <GridItem key= {el.item_id}>
+          <Link to={el.item_id}>
+            <Box>
+            <Box h="70%">
+          <Image mw="100%" h="70vh" m="auto" src={el.item_img}/>
+          </Box>
           <Box justifyItems="center" textAlign="left" fontSize="11px" fontFamily="Arial,Sans-Serif" m="5px" >
-          <Text as="p" >{el.title}</Text>
-          <Text as="p" >{el.des}</Text>
-          <Text as="p">$ {el.price} </Text>
+          <Text as="p" >{el.item_design}</Text>
+          <Text as="p" >{el.item_desc}</Text>
+          <Text as="p"> {el.iten_price} </Text>
+          </Box>
           </Box>
             </Link>
             </GridItem>
         )
         })}</Grid>    
-    <Box h="500px" w="15%" border="1px solid pink"> <Sorting /> </Box>    
+    <Box h="500px" w="12%" p={[1]} > <Sorting /> </Box>    
     </Stack>
     <Footer />
     </>

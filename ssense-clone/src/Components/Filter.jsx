@@ -134,19 +134,19 @@ function Filter() {
         "Christian Lou"]
       }
   return (
-    <Stack justifyContent="center" pl="12px" textTransform="uppercase">
-        <Box fontSize="14px" mb="25px"><Checkbox type="blackAlpha" >Sale Only</Checkbox></Box>
+    <Stack justifyContent="center" pl="12px" textTransform="uppercase" fontSize="12px" fontFamily="Arial,Sans-Serif">
+        <Box fontSize="12px" mb="25px"><Checkbox type="blackAlpha" >Sale Only</Checkbox></Box>
        <VStack alignItems="flex-start" pl={[1]} fontWeight="400" pb="25px">
          <Heading as="h2" fontSize="14px" textDecoration="underline"> All Categories</Heading>
-        <Box fontSize="12px" flexDirection="column" >{
+        <Box  flexDirection="column" >{
             Filt_data.Categories.map((el)=>(
-                <Box key={el}><Link  ml="0" > {el}</Link></Box>
+                <Box key={el} lineHeight="18px"><Link  ml="0" > {el}</Link></Box>
             ))} </Box>
             </VStack>
             <VStack alignItems="flex-start" pl={[1]} pb="20px"> <Heading as="h2" fontSize="14px"> All Designers</Heading>
-        <Box fontSize="12px" flexDirection="column">{
+        <Box  flexDirection="column">{
             Filt_data.Designers.map((el)=>(
-                <Box key={el}><Link  ml="0" > {el}</Link></Box>
+                <Box key={el} lineHeight="18px"><Link  ml="0" > {el}</Link></Box>
             ))} </Box>
             </VStack> 
     </Stack>
