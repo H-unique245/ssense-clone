@@ -23,7 +23,7 @@ function Login() {
       const handleSubmit=(e)=>{
       e.preventDefault();
       axios
-      .post("https://server-ssense-clone.herokuapp.com/user", logUser
+      .post("https://server-ssense-clone.onrender.com/login", logUser
         // email: user.email,
         // password: user.password,
       ).then((res)=>{

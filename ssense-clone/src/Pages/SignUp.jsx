@@ -32,7 +32,7 @@ import Footer from "../Components/Footer";
     };
     const handleRegister =(e)=>{
     e.preventDefault();
-    axios.post("https://server-ssense-clone.herokuapp.com/user",user)
+    axios.post("https://server-ssense-clone.onrender.com/user",user)
     .then((res)=>{
         console.log(setUser)
       setTimeout(()=>{

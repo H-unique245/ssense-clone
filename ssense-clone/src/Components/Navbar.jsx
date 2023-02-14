@@ -9,11 +9,11 @@ const Navbar = () => {
         <Box margin="10px" _hover={{textDecoration:"underline"}}>
         <NavLink to="/Menswear">MensWear</NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}  > <NavLink to="/Womenswear">WomensWear</NavLink></Box>
-        <Box margin="10px"_hover={{textDecoration:"underline"}} > <NavLink to="/EveryThingElse">EveryThing Else</NavLink></Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/Sale">Sale</NavLink>
+        <Box margin="10px" _hover={{textDecoration:"underline"}}  > <NavLink to="/#">WomensWear</NavLink></Box>
+        <Box margin="10px"_hover={{textDecoration:"underline"}} > <NavLink to="/#">EveryThing Else</NavLink></Box>
+        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/#">Sale</NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/Search">Search</NavLink></Box>       
+        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/#">Search</NavLink></Box>       
       </Box>
       <Box>
         <NavLink to="/">

@@ -14,7 +14,7 @@ function MensPage() {
 
 useEffect(()=>{
   
-  axios.get('https://server-ssense-clone.herokuapp.com/mensData')
+  axios.get('https://server-ssense-clone.onrender.com/mensData')
   .then((res)=>{
     /* console.log(res.data)*/
     setData(res.data)
