@@ -4,16 +4,32 @@ import { NavLink } from 'react-router-dom';
 // import "../styles.css";
 const Navbar = () => {
   return (
-    <Flex textTransform="uppercase" fontFamily="arial" fontSize="12px" justifyContent="space-around" >
+    <Flex
+      textTransform="uppercase"
+      fontFamily="arial"
+      fontSize="12px"
+      justifyContent="space-around"
+    >
       <Box display="flex" justifyContent="space-around">
-        <Box margin="10px" _hover={{textDecoration:"underline"}}>
-        <NavLink to="/Menswear">MensWear</NavLink>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          <NavLink to="/Menswear">MensWear</NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}  > <NavLink to="/#">WomensWear</NavLink></Box>
-        <Box margin="10px"_hover={{textDecoration:"underline"}} > <NavLink to="/#">EveryThing Else</NavLink></Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/#">Sale</NavLink>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          {' '}
+          <NavLink to="/#">WomensWear</NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}> <NavLink to="/#">Search</NavLink></Box>       
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          {' '}
+          <NavLink to="/#">EveryThing Else</NavLink>
+        </Box>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          {' '}
+          <NavLink to="/#">Sale</NavLink>
+        </Box>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          {' '}
+          <NavLink to="/#">Search</NavLink>
+        </Box>
       </Box>
       <Box>
         <NavLink to="/">
@@ -31,9 +47,9 @@ const Navbar = () => {
       </Box>
       <Box display="flex" justifyContent="space-around">
         <Box margin="10px">
-        <NavLink to="#" id="language">
-          ENGLISH
-          {/* <ul className='drop_down'>
+          <NavLink to="#" id="language">
+            ENGLISH
+            {/* <ul className='drop_down'>
                         <li>
                             FRANCHIES
                         </li>
@@ -42,22 +58,18 @@ const Navbar = () => {
                         <li>한국어</li>
                     </ul>
                      */}
-        </NavLink>
-        </Box >
-        <Box margin="10px" _hover={{textDecoration:"underline"}}>
-        <NavLink to="/login" >
-          LOGIN
-        </NavLink>
+          </NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}>
-        <NavLink to="/" >
-          WISHLIST
-        </NavLink>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          <NavLink to="/login">LOGIN</NavLink>
         </Box>
-        <Box margin="10px" _hover={{textDecoration:"underline"}}>
-        <NavLink to="/checkout" className="link">
-          SHOPPING BAG
-        </NavLink>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          <NavLink to="/">WISHLIST</NavLink>
+        </Box>
+        <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
+          <NavLink to="/checkout" className="link">
+            SHOPPING BAG
+          </NavLink>
         </Box>
       </Box>
     </Flex>
