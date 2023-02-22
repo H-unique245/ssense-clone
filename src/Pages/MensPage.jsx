@@ -60,16 +60,33 @@ function MensPage() {
           gap={5}
         >
           {
-            //     loading ? <Box><Spinner
-            //   thickness='4px'
-            //   speed='0.65s'
-            //   emptyColor='gray.200'
-            //   color='blue.500'
-            //   size='xl'
-            // />
-            // <Box></Box>
-            // </Box>
-            //  :
+                loading ? new Array(15).map(i=>{
+                return <Skeleton key={i+9} >
+                  <GridItem  h={'350px'} boxShadow={'md'}>
+                    <Box>
+                      <Box h="70%">
+                        <Image
+                          mw="100%"
+                          h="280px"
+                          m="auto"
+                          src={''}
+                        />
+                      </Box>
+                      <Box
+                        justifyItems="center"
+                        textAlign="left"
+                        fontSize="11px"
+                        fontFamily="Arial,Sans-Serif"
+                        m="5px"
+                      >
+                        <Text as="p">""</Text>
+                        <Text as="p">""</Text>
+                        <Text as="p">"" </Text>
+                      </Box>
+                    </Box>
+                </GridItem>
+              </Skeleton>})
+             :
             data.map(el => {
               /* console.log(el) */
               return (
