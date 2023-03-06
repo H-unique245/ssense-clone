@@ -20,11 +20,11 @@ const Navbar = () => {
         </Box>
         <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
           {' '}
-          <Link to="/#">EveryThing Else</Link>
+          <Link to="/everything-else">EveryThing Else</Link>
         </Box>
         <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
           {' '}
-          <Link to="/#">Sale</Link>
+          <Link to="/sale">Sale</Link>
         </Box>
         <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
           {' '}
@@ -47,7 +47,6 @@ const Navbar = () => {
       </Box>
       <Box display="flex" justifyContent="space-around">
         <Box margin="10px">
-          <Link to="#" id="language">
             ENGLISH
             {/* <ul className='drop_down'>
                         <li>
@@ -58,7 +57,6 @@ const Navbar = () => {
                         <li>한국어</li>
                     </ul>
                      */}
-          </Link>
         </Box>
         <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
           <Link to="/login">LOGIN</Link>
