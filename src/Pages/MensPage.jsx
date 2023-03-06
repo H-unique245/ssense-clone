@@ -90,16 +90,16 @@ function MensPage() {
             data.map(el => {
               /* console.log(el) */
               return (
-                <Skeleton isLoaded={!loading} key={el.item_id}>
-                  <GridItem key={el.item_id} h={'350px'} boxShadow={'md'}>
-                    <Link to={el.item_id}>
+                <Skeleton isLoaded={!loading} key={el.id}>
+                  <GridItem key={el.id} h={'350px'} boxShadow={'md'}>
+                    <Link to={el.id}>
                       <Box>
                         <Box h="70%">
                           <Image
                             mw="100%"
                             h="280px"
                             m="auto"
-                            src={el.item_img}
+                            src={el.itemImg}
                           />
                         </Box>
                         <Box
@@ -109,9 +109,9 @@ function MensPage() {
                           fontFamily="Arial,Sans-Serif"
                           m="5px"
                         >
-                          <Text as="p">{el.item_design}</Text>
-                          <Text as="p">{el.item_desc}</Text>
-                          <Text as="p"> {el.iten_price} </Text>
+                          <Text as="p">{el.title}</Text>
+                          <Text as="p">{el.des}</Text>
+                          <Text as="p"> {el.price} </Text>
                         </Box>
                       </Box>
                     </Link>

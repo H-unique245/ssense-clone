@@ -14,14 +14,14 @@ import {
   import Filter from '../Components/Filter';
   import Sorting from '../Components/Sorting';
   
-  function WomensPage() {
+  function SalesPage() {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
   
     useEffect(() => {
       setLoading(true);
       axios
-        .get('https://server-ssense-clone.onrender.com/womenData')
+        .get('https://server-ssense-clone.onrender.com/salesData')
         .then(res => {
           // console.log("data",res.data)
           setLoading(false);
@@ -135,5 +135,5 @@ import {
     );
   }
   
-  export default WomensPage;
+  export default SalesPage;
   
