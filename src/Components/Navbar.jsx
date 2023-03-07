@@ -1,7 +1,6 @@
 import { Box, Flex, Image } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import "../styles.css";
 const Navbar = () => {
   return (
     <Flex
@@ -47,16 +46,7 @@ const Navbar = () => {
       </Box>
       <Box display="flex" justifyContent="space-around">
         <Box margin="10px">
-            ENGLISH
-            {/* <ul className='drop_down'>
-                        <li>
-                            FRANCHIES
-                        </li>
-                        <li>日本語</li>
-                        <li>中文</li>
-                        <li>한국어</li>
-                    </ul>
-                     */}
+          ENGLISH
         </Box>
         <Box margin="10px" _hover={{ textDecoration: 'underline' }}>
           <Link to="/login">LOGIN</Link>

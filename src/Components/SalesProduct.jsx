@@ -11,21 +11,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function MensProductCard() {
+function SalesProductCard() {
   const params = useParams();
   const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState({});
 
-  async function GetProduct(id) {
-    setLoading(true);
-    try {
-      let res = await axios.get(
-        `https://server-ssense-clone.onrender.com/mensData?id=${id}`
-      );
-      setProduct(res.data[0]);
-      setLoading(false);
-    } catch (error) {}
-  }
   const AddtoCart = async data => {
     try {
       let res = await axios.post(
@@ -54,6 +44,16 @@ function MensProductCard() {
     }
   };
 
+  async function GetProduct(id) {
+    setLoading(true);
+    try {
+      let res = await axios.get(
+        `https://server-ssense-clone.onrender.com/salesData?id=${id}`
+      );
+      setProduct(res.data[0]);
+      setLoading(false);
+    } catch (error) {}
+  }
   useEffect(() => {
     GetProduct(params.id);
 
@@ -107,4 +107,4 @@ function MensProductCard() {
   );
 }
 
-export default MensProductCard;
+export default SalesProductCard;
