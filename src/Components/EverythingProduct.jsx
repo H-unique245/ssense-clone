@@ -18,11 +18,10 @@ function EverythingProductCard() {
 
   const AddtoCart = async data => {
     try {
-      let res = await axios.post(
+      await axios.post(
         `https://server-ssense-clone.onrender.com/cartData`,
         data
       );
-      console.log(res);
 
       alert('Item Added to Cart Successfully!!');
     } catch (error) {
@@ -32,11 +31,10 @@ function EverythingProductCard() {
 
   const AddtoWishlist = async data => {
     try {
-      let res = await axios.post(
+      await axios.post(
         `https://server-ssense-clone.onrender.com/wishListData`,
         data
       );
-      console.log(res);
 
       alert('Item Added to Wishlist Successfully!!');
     } catch (error) {
@@ -57,9 +55,9 @@ function EverythingProductCard() {
   useEffect(() => {
     GetProduct(params.id);
 
-    //   console.log(params);
   }, [params.id]);
-  console.log(product);
+
+
   if (loading) {
     return <Box>....Loading</Box>;
   }

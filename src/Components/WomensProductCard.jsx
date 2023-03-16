@@ -18,12 +18,10 @@ function WomensProductCard() {
 
   const AddtoCart = async data => {
     try {
-      let res = await axios.post(
+       await axios.post(
         `https://server-ssense-clone.onrender.com/cartData`,
         data
       );
-      console.log(res);
-      alert('Item Added to Cart Successfully!!');
     } catch (error) {
       alert('Error while adding item to Cart.');
     }
@@ -31,11 +29,10 @@ function WomensProductCard() {
 
   const AddtoWishlist = async data => {
     try {
-      let res = await axios.post(
+       await axios.post(
         `https://server-ssense-clone.onrender.com/wishListData`,
         data
       );
-      console.log(res);
 
       alert('Item Added to Wishlist Successfully!!');
     } catch (error) {
@@ -56,9 +53,7 @@ function WomensProductCard() {
   useEffect(() => {
     GetProduct(params.id);
 
-    //   console.log(params);
   }, [params.id]);
-  console.log(product);
   if (loading) {
     return <Box>....Loading</Box>;
   }
