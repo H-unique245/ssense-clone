@@ -1,4 +1,4 @@
-import { Box, Button, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 import Banner from '../Components/Home/Banner';
 import BannerBox from '../Components/Home/BannerBox';
 import HomeBottom from '../Components/Home/HomeBottom';
