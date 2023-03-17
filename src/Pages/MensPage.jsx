@@ -18,18 +18,28 @@ function MensPage() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+  const fetchProductData=async()=>{
     setLoading(true);
-    axios
-      .get('https://server-ssense-clone.onrender.com/mensData')
-      .then(res => {
-        // console.log("data",res.data)
+      try{
+        let res= await axios.get('https://server-ssense-clone.onrender.com/mensData');
+         setLoading(false);
+         setData(res.data);
+      } 
+      catch(err){
         setLoading(false);
-        setData(res.data);
-      })
-      .catch(err => console.log(err));
-  }, []);
+            console.log(err)
+      }
 
+  }
+  useEffect(() => {
+      fetchProductData();
+  }, []);
+  if(loading) {
+  <Box>
+                  <Image src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif?20170503175831" alt="loading" />
+                </Box>
+
+  } 
   return (
     <>
       <Stack
@@ -60,37 +70,10 @@ function MensPage() {
           gap={5}
         >
           {
-                loading ? new Array(15).map(i=>{
-                return <Skeleton key={i+9} >
-                  <GridItem  h={'350px'} boxShadow={'md'}>
-                    <Box>
-                      <Box h="70%">
-                        <Image
-                          mw="100%"
-                          h="280px"
-                          m="auto"
-                          src={''}
-                        />
-                      </Box>
-                      <Box
-                        justifyItems="center"
-                        textAlign="left"
-                        fontSize="11px"
-                        fontFamily="Arial,Sans-Serif"
-                        m="5px"
-                      >
-                        <Text as="p">""</Text>
-                        <Text as="p">""</Text>
-                        <Text as="p">"" </Text>
-                      </Box>
-                    </Box>
-                </GridItem>
-              </Skeleton>})
-             :
-            data.map(el => {
+              
+            data?.map(el => {
               /* console.log(el) */
               return (
-                <Skeleton isLoaded={!loading} key={el.id}>
                   <GridItem key={el.id} h={'350px'} boxShadow={'md'}>
                     <Link to={el.id}>
                       <Box>
@@ -116,7 +99,6 @@ function MensPage() {
                       </Box>
                     </Link>
                   </GridItem>
-                </Skeleton>
               );
             })
           }
