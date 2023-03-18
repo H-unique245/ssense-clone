@@ -18,7 +18,7 @@ export default function AllRoutes() {
     <Routes>
       <Route path="/" element={<Homepage />} />
       <Route path="/menswear" element={<MensPage />} />
-      <Route path="/Menswear/:id" element={<MensProductCard />} />
+      <Route path="/menswear/:id" element={<MensProductCard />} />
       <Route path="/womenswear" element={<WomensPage />} />
       <Route path="/womenswear/:id" element={<WomensProductCard />} />
       <Route path="/everything-else" element={<EverythingPage />} />

@@ -1,126 +1,116 @@
-import { Box, Image, Stack } from '@chakra-ui/react'
+import { Box, Image, Stack, Text } from '@chakra-ui/react'
 
 import React from 'react'
 
 const HomeBottom = () => {
   return (
-    <Stack>
-    <Box m="2%" padding="1rem" display="flex" gap="8vh">
-      <Box w="32%">
+    <Stack padding="1rem" direction={['column','row']} gap="8vh" m='auto'>
+      
+      <Box w={{base:"90%",sm:"95%",md:"30%",lg:"32%"}} m='auto'>
         <Box>
           <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1656427509/kvdzdh9kvqywamz8jfvc.jpg" />
         </Box>
         <Box>
           <div style={{ display: 'flex' }}>
-            <div
-              style={{
-                padding: '10px',
-                fontSize: '11px',
-                textTransform: 'uppercase',
-              }}
+            <Box
+                padding= '10px'
+                fontSize={{ base: '8px', sm: '8px', md: '10px', lg: '11px' }}
+                textTransform= 'uppercase'
             >
               Recent
-            </div>
-            <p
-              style={{
-                fontSize: '19px',
-                lineHeight: '26px',
-                textTransform: 'uppercase',
-              }}
+            </Box>
+            <Text
+                fontSize={{ base: '13px', sm: '14px', md: '16px', lg: '19px' }}
+                lineHeight={{
+                  base: '18px',
+                  sm: '19px',
+                  md: '22px',
+                  lg: '26px',
+                }}
+                textTransform= 'uppercase'
             >
-              {' '}
               Living the Anna Sui Fantasy
-            </p>
+            </Text>
           </div>
-          <div
-            style={{
-              fontSize: '14px',
-              lineHeight: '18px',
-              color: 'gray',
-            }}
+          <Box
+              fontSize={{base:"10px",sm:"10px",md:"12px",lg:"14px"}}
+              lineHeight={{base:"14px",sm:"14px",md:"16px",lg:"18px"}}
+              color= 'gray'
           >
-            {' '}
             Fashion | Jun 28
-          </div>
+          </Box>
         </Box>
       </Box>
-      <Box w="32%">
+      <Box w={{base:"90%",sm:"95%",md:"30%",lg:"32%"}} m='auto'>
         <Box>
           <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1655828088/doatgzikdfaadogtnvv1.jpg" />
         </Box>
         <Box>
           <div style={{ display: 'flex' }}>
-            <div
-              style={{
-                padding: '10px',
-                fontSize: '11px',
-                textTransform: 'uppercase',
-              }}
+            <Box
+                padding= '10px'
+                fontSize={{ base: '8px', sm: '8px', md: '10px', lg: '11px' }}
+                textTransform= 'uppercase'
             >
               Recent
-            </div>
-            <div
-              style={{
-                fontSize: '19px',
-                lineHeight: '26px',
-                textTransform: 'uppercase',
-              }}
+            </Box>
+            <Box
+                fontSize={{ base: '13px', sm: '14px', md: '16px', lg: '19px' }}
+                lineHeight={{
+                  base: '18px',
+                  sm: '19px',
+                  md: '22px',
+                  lg: '26px',
+                }}
+                textTransform= 'uppercase'
             >
-              {' '}
               Finding the Last Love Hotel
-            </div>
+            </Box>
           </div>
-          <div
-            style={{
-              fontSize: '14px',
-              lineHeight: '18px',
-              color: 'gray',
-            }}
+          <Box
+              fontSize={{base:"10px",sm:"10px",md:"12px",lg:"14px"}}
+              lineHeight={{base:"14px",sm:"14px",md:"16px",lg:"18px"}}
+              color= 'gray'
           >
-            {' '}
             Culture | Jun 28
-          </div>
+          </Box>
         </Box>
       </Box>
-      <Box w="32%">
+      <Box w={{base:"90%",sm:"95%",md:"30%",lg:"32%"}} m='auto'>
         <Box>
           <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_480,q_90,f_auto,dpr_auto/v1655820577/mvakse2eksisme4yhbt4.jpg" />
         </Box>
         <Box>
           <div style={{ display: 'flex' }}>
-            <div
-              style={{
-                padding: '10px',
-                fontSize: '11px',
-                textTransform: 'uppercase',
-              }}
+            <Box
+                padding= '10px'
+                fontSize={{ base: '8px', sm: '8px', md: '10px', lg: '11px' }}
+                textTransform= 'uppercase'
             >
               Recent
-            </div>
-            <div
-              style={{
-                fontSize: '19px',
-                lineHeight: '26px',
-                textTransform: 'uppercase',
-              }}
+            </Box>
+            <Box
+                fontSize={{ base: '13px', sm: '14px', md: '16px', lg: '19px' }}
+                lineHeight={{
+                  base: '18px',
+                  sm: '19px',
+                  md: '22px',
+                  lg: '26px',
+                }}
+                textTransform= 'uppercase'
             >
-              {' '}
               You’ve Got the Look
-            </div>
+            </Box>
           </div>
-          <div
-            style={{
-              fontSize: '14px',
-              lineHeight: '18px',
-              color: 'gray',
-            }}
+          <Box
+              fontSize={{base:"10px",sm:"10px",md:"12px",lg:"14px"}}
+              lineHeight={{base:"14px",sm:"14px",md:"16px",lg:"18px"}}
+              color= 'gray'
           >
-            {' '}
             Fashion | Jun 23
-          </div>
+          </Box>
         </Box>
       </Box>
-    </Box>
   </Stack>
   )
 }

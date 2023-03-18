@@ -3,14 +3,13 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <Stack>
-      <Box m="2%" padding="1rem" display="flex" gap="8vh">
-        <Box w="50%">
+    <Stack padding="1rem" direction={['column','row']} gap="8vh">
+        <Box w={{base:"90%",sm:"95%",md:"50%"}} m='auto' >
           <Box>
-            <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1658237092/l06ie9510jtzzz2rif8k.jpg" />
+            <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1658237092/l06ie9510jtzzz2rif8k.jpg" alt="" />
           </Box>
           <Box>
-            <div style={{ display: 'flex' }}>
+            <Stack direction={'row'}>
               <Text padding="10px" fontSize={{base:"8px",sm:"8px",md:"10px",lg:"11px"}}>
                 Culture
               </Text>
@@ -28,7 +27,7 @@ const Banner = () => {
                 {' '}
                 SMALL REVOLUTIONS WITH JOSHUA P. MATTHEWS
               </Text>
-            </div>
+            </Stack>
             <Box fontSize={{base:'14px',sm:'14px',md:'18px',lg:'20px'}} lineHeight={{base:'19px',sm:'20px',md:'23px',lg:'26px'}}>
               {' '}
               The NY-based cyclist and author of HARD-SHELL® speaks to Sydney
@@ -36,12 +35,12 @@ const Banner = () => {
             </Box>
           </Box>
         </Box>
-        <Box w="50%">
+        <Box w={{base:"90%",sm:"95%",md:"50%"}} m='auto' >
           <Box>
             <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1658263193/azvvibhaf1pig0yxqayw.jpg" />
           </Box>
           <Box>
-            <div style={{ display: 'flex' }}>
+            <Stack direction={'row'}>
               <Box padding="10px" fontSize={{base:"8px",sm:"8px",md:"10px",lg:"11px"}}>
                 Market
               </Box>
@@ -58,14 +57,13 @@ const Banner = () => {
                 {' '}
                 Tripping Out
               </Box>
-            </div>
+            </Stack>
             <Box fontSize={{base:'14px',sm:'14px',md:'18px',lg:'20px'}} lineHeight={{base:'19px',sm:'20px',md:'23px',lg:'26px'}}>
               {' '}
               Take a Trip with The Row, D.S. and Durga, and Eytys.
             </Box>
           </Box>
         </Box>
-      </Box>
     </Stack>
   );
 };

@@ -1,12 +1,13 @@
 import { Box, Button, Image, Stack, Text } from '@chakra-ui/react';
-
+import { useNavigate } from "react-router-dom";
 import React from 'react';
 
 const HomeBottomShop = () => {
+  const navigate= useNavigate();
   return (
     <Stack>
       <Box m="2%" padding="1rem" display="flex" gap="8vh">
-        <Box w="50%">
+        <Box w={{base:"40%",sm:"40%",md:"50%"}} m='auto'>
           <Box>
             <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1658150264/smf4mzepaq855zmdegi1.jpg" />
           </Box>
@@ -41,11 +42,11 @@ const HomeBottomShop = () => {
                 lg: '26px',
               }}
             >
-              <Button variant="outline"> SHOP MENSWEAR</Button>
+              <Button fontSize={{ base: '10px', sm: '12px', md: '14px', lg: '16px' }} _hover={{cursor:"pointer"}} variant="outline" onClick={()=>navigate("/menswear")}> SHOP MENSWEAR</Button>
             </Box>
           </Box>
         </Box>
-        <Box w="50%">
+        <Box w={{base:"40%",sm:"40%",md:"50%"}} m='auto'>
           <Box>
             <Image src="https://res.cloudinary.com/ssenseweb/image/upload/w_768,q_90,f_auto,dpr_auto/v1658150277/hlaq5txh0gv05w9xyik7.jpg" />
           </Box>
@@ -82,7 +83,7 @@ const HomeBottomShop = () => {
               }}
               textTransform="uppercase"
             >
-              <Button variant="outline"> SHOP WOMENSWEAR</Button>{' '}
+              <Button fontSize={{ base: '10px', sm: '12px', md: '14px', lg: '16px' }} _hover={{cursor:"pointer"}} variant="outline" onClick={()=>navigate("/womenswear")}> SHOP WOMENSWEAR</Button>{' '}
             </Box>
           </Box>
         </Box>
