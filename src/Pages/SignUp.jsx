@@ -23,26 +23,33 @@ const SignUp = () => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
-  const handleRegister = e => {
+  const handleRegister = async(e) => {
     e.preventDefault();
-    axios
-      .post('https://server-ssense-clone.onrender.com/user', user)
-      .then(res => {
-        console.log(setUser);
-        setTimeout(() => {
-          Navigate('/login');
-        }, 3000);
+
+    try{
+      let res = await axios.post('https://server-ssense-clone.onrender.com/users', user)
+
+      // console.log("res", res.data)
+        if(res.status===201){
+          alert('Signup Successfull !!!');
+              Navigate("/login");
+        }
+        else if(res.data=== "Email already exists"){
+          alert(res.data);
+        }
+          setUser({
+            email: '',
+            password: '',
+          });
+  
+      }
+      catch(err){
         setUser({
           email: '',
           password: '',
         });
-        alert('Signup Successfull !!!');
-      })
-      .catch(e => {
-        console.log('e', e);
-
-        alert('Please Enter 8 Digit Password');
-      });
+        alert(`${err.message}\nKindly please try signup with another email !`);
+    }
   };
   return (
     <>
