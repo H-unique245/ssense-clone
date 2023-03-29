@@ -4,49 +4,54 @@ import { Input } from '@chakra-ui/input';
 import { Box, Spacer, Text } from '@chakra-ui/layout';
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [logUser, setLogUser] = useState({
     email: '',
     password: '',
   });
+  const navigate= useNavigate();
 
   const onChangeInput = e => {
     const { name, value } = e.target;
     setLogUser({ ...logUser, [name]: value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    axios
-      .post(
-        'https://server-ssense-clone.onrender.com/login',
-        logUser
-      )
-      .then(res => {
-        setTimeout(() => {
-          Navigate('/');
-        }, 1000);
+    try{
+      let res = await axios.post('https://server-ssense-clone.onrender.com/login', logUser)
+
+      // console.log("res", res.data)
+        if(res.status===200){
+          alert('Login Successfull !!!');
+          localStorage.setItem("Ssense-mail", JSON.stringify(logUser.email))
+              navigate("/");
+        }
+        else if(res.data=== "Email already exists"){
+          alert(res.data);
+        }
+          setLogUser({
+            email: '',
+            password: '',
+          });
+  
+      }
+      catch(err){
         setLogUser({
           email: '',
           password: '',
         });
-        alert('login successfull');
-        console.log(res);
-      })
-      .catch(err => {
-        alert('Login Failed !!!');
-
-        Navigate('/signup');
-        console.log(err);
-      });
+        alert(`${err.message}\nKindly check details once again!!`);
+    }
   };
 
   return (
     <>
       <Box width="50%" m="auto 150px auto auto" pb="200px" pt="60px">
-        <Text fontSize="12px">LOGIN OR CREATE ACCOUNT</Text>
+        <Text fontSize="12px">LOGIN OR <Text as='span' textDecoration={'underline'} _hover={{color:'blue'}} > <Link to="/signup"> CREATE ACCOUNT </Link> </Text></Text>
         <br></br>
         <FormControl>
           <FormLabel fontWeight="200">Enter Email Address</FormLabel>

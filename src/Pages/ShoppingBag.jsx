@@ -26,7 +26,8 @@ function ShoppingBag() {
   const [cartData, setCartData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const naviagte= useNavigate();
+  const userEmail= JSON.parse(localStorage.getItem("Ssense-mail"))
+  const navigate= useNavigate();
 
 
   const getCartData = async () => {
@@ -60,6 +61,12 @@ function ShoppingBag() {
     // console.log("data rendered!!!")
   }, []);
 
+const handleCheckout=()=>{
+  setCartData([]);
+  alert("Order placed successfully!!");
+  navigate("/")
+}
+
   // effect for cart price
   useEffect(()=>{
     const cal_price = cartData?.reduce(
@@ -91,17 +98,17 @@ function ShoppingBag() {
            borderRadius="0"
            color="white"
            type="submit"
-           onClick={()=>{naviagte("/menswear")}} >Shop MensWear</Button>
+           onClick={()=>{navigate("/menswear")}} >Shop MensWear</Button>
             <Button backgroundColor="black"
            borderRadius="0"
            color="white"
            type="submit"
-           onClick={()=>{naviagte("/womenswear")}} >Shop WomensWear</Button>
+           onClick={()=>{navigate("/womenswear")}} >Shop WomensWear</Button>
             <Button backgroundColor="black"
            borderRadius="0"
            color="white"
            type="submit"
-           onClick={()=>{naviagte("/sale")}} >Shop Sale</Button>
+           onClick={()=>{navigate("/sale")}} >Shop Sale</Button>
           </HStack>
         </Container>
       ) : (
@@ -203,8 +210,8 @@ function ShoppingBag() {
           </TableContainer>
         </Box>
         <Box mt={0} position={'relative'} top={"10px"} right={"10rem"} border={'1px solid'} >
-          <Text>Logged In as</Text>
-          <Text>Email</Text>
+          <Text>Logged In as:</Text>
+          <Text> {userEmail}</Text>
           <Text>{" "}</Text>
           <Button 
            mt={4}
@@ -212,7 +219,7 @@ function ShoppingBag() {
            borderRadius="0"
            color="white"
            type="submit"
-           onClick={()=>{}}
+           onClick={handleCheckout}
           > Proceed to Checkout</Button>
         </Box>
         </HStack>
